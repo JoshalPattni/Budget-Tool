@@ -13,45 +13,25 @@
     </header>
     <section id="income">
         <h2>Income</h2>
-        <p><strong>Gross Annual Income:</strong> Your total yearly earnings before any deductions.</p>
-        <input type="number" id="annualIncome" placeholder="Gross Annual Income (before tax)">
-    </section>
-    <section id="debts">
-        <h2>Monthly Debts</h2>
-        <p>Enter your recurring monthly debt payments.</p>
-        <input type="number" id="carLoans" placeholder="Car Loans">
-        <input type="number" id="creditCardMin" placeholder="Credit-Card Minimums">
-        <input type="number" id="studentLoans" placeholder="Student Loans">
-    </section>
-    <section id="housingExpenses">
-        <h2>Monthly Housing Expenses</h2>
-        <p>Expected or current monthly costs associated with housing.</p>
-        <input type="number" id="propertyTax" placeholder="Property Tax (Monthly)">
-        <input type="number" id="homeInsurance" placeholder="Home Owners Insurance (Monthly)">
-        <input type="number" id="pmi" placeholder="PMI (Private Mortgage Insurance)">
-        <input type="number" id="hoaFees" placeholder="HOA Fees">
-    </section>
-    <section id="funds">
-        <h2>Available Funds</h2>
-        <p>Funds you have available for down payment and other buying expenses.</p>
-        <input type="number" id="availableFunds" placeholder="Available Funds">
-    </section>
-    <section id="financing">
-        <h2>Financing</h2>
-        <p>Details about your mortgage financing.</p>
-        <input type="number" id="mortgageTerm" placeholder="Term of Mortgage (years)">
-        <input type="number" id="interestRate" placeholder="Annual Interest Rate">
-    </section>
-    <section id="depreciation">
-        <h2>Depreciation</h2>
-        <p>For investment properties, calculate the straight-line depreciation.</p>
-        <input type="number" id="depreciablePercent" placeholder="Percentage of Home Price Depreciable">
-        <input type="number" id="depreciationYears" placeholder="Years to Depreciate">
-    </section>
-    <section id="results">
+        <p>Enter your monthly income details.</p>
+        <input type="number" id="netIncome" placeholder="Net Monthly Income">
+        <select id="incomeFrequency">
+            <option value="monthly">Monthly</option>
+            <option value="biweekly">Bi-Weekly</option>
+            <option value="weekly">Weekly</option>
+        </select>
+        <input type="number" id="otherIncome" placeholder="Other (Alimony, Child Support, etc.)">
+        <select id="otherIncomeFrequency">
+            <option value="monthly">Monthly</option>
+            <option value="biweekly">Bi-Weekly</option>
+            <option value="weekly">Weekly</option>
+        </select>
         <button onclick="calculateResults()">Calculate</button>
         <div id="output"></div>
     </section>
+    
+    <!-- Add other sections for expenses and summary here -->
+
     <script src="script.js"></script>
 </body>
 </html>
